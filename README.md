@@ -1,5 +1,4 @@
-# My Site
-
+# Lattes Xml to CSV
 
 ## Prerequisites
 
@@ -11,24 +10,22 @@ What you need to install to use the software locally
 ## Tech Stack
 
 - TypeScript
-- GitHub Actions
-- Jest
 
 ## Run Locally
 
 Clone the project
 
 ```sh
-  git clone https://github.com/guilhermebolfe11/
+  git clone https://github.com/guilhermebolfe11/lattes-xml-to-csv
 ```
 
 Go to the project directory
 
 ```sh
-  cd 
+  cd lattes-xml-to-csv
 ```
 
-In the project directory, copy the .env.example file with the name .env.local and you can run:
+In the project directory, copy the .env.example file with the name .env and you can run:
 
 ### Install dependencies
 
@@ -41,22 +38,28 @@ In the project directory, copy the .env.example file with the name .env.local an
 ### Start
 
 ```sh
+npm run build
+or
+yarn build
+```
+
+```sh
 npm run start
 or
 yarn start
 ```
 
-Runs the app in the development mode.\
+Runs the app in the production mode.
 
-## Running Tests
+### Development
 
-To run tests, run the following command
-
-```bash
-  npm run test
-  or
-  yarn test
+```sh
+npm run dev
+or
+yarn dev
 ```
+
+Runs the app in the development mode.
 
 ## License
 
@@ -64,4 +67,4 @@ Usage is provided under the [MIT License](https://github.com/guilhermebolfe11//b
 
 ## Authors
 
-- [@guilhermebolfe11](https://www.github.com/guilhermebolfe11)
+- [@guilhermebolfe11](https://www.github.com/guilhermebolfe11/lattes-xml-to-csv)

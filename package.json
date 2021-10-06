@@ -5,7 +5,6 @@
   "repository": "https://github.com/guilhermebolfe11/lattes-xml-to-csv.git",
   "author": "Guilherme Bolfe <guilhermebolfe11@gmail.com>",
   "license": "MIT",
-  "type": "module",
   "dependencies": {
     "json2csv": "^5.0.6",
     "ts-dotenv": "^0.8.3",
@@ -33,7 +32,9 @@
     "tslib": "^2.3.1"
   },
   "scripts": {
-    "dev": "ts-node-dev --inspect --ignore-watch node_modules --respawn --debug src/index.ts"
+    "dev": "ts-node-dev --inspect --ignore-watch node_modules --respawn --debug src/index.ts",
+    "build": "tsc",
+    "start": "node ./dist/index.js"
   },
   "config": {
     "commitizen": {

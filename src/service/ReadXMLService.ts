@@ -1,4 +1,5 @@
 import { readdir, readFile } from 'fs/promises'
+import env from "../config/env";
 import FileXml from '../entities/File';
 
 class ReadXMLService {
@@ -7,7 +8,7 @@ class ReadXMLService {
     console.time("Read");
     let result = new Array<FileXml>();
     let errors = new Array<string>();
-    let filesPath = await readdir('./inputs')
+    let filesPath = await readdir(env.INPUT_PATH)
 
     if (!filesPath || filesPath.length < 1)
       throw new Error("Files not found in inputs folder");
@@ -15,7 +16,7 @@ class ReadXMLService {
     for (let index in filesPath) {
       try {
         let fileName = filesPath[index];
-        let file = await readFile(`./inputs/${fileName}`, { encoding: 'latin1' });
+        let file = await readFile(`${env.INPUT_PATH}/${fileName}`, { encoding: 'latin1' });
         result.push(new FileXml(fileName, file.toString()))
       } catch (error) {
         if (error instanceof Error)
